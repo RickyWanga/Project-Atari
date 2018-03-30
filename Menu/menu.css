@@ -1,0 +1,182 @@
+html {
+  margin: 0px;
+  width: 100%;
+  height: 100%;
+  padding: 0px;
+  background: #dddddd;
+  font-family: 'Audiowide', Arial, Helvetica, sans-serif;
+  font-size: 24px;
+}
+
+body {
+  margin: 0px;
+  width: 100%;
+  height: 100%;
+  padding: 0px;
+}
+
+.backing {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+}
+
+header {
+  position: absolute;
+  top: 0px;
+  left: -150px;
+  padding: 25px 0px;
+}
+
+.navItem {
+  display: block;
+  position: relative;
+  top: 0px;
+  left: 0px;
+  margin-bottom: 15px;
+  width: 300px;
+  height: 30px;
+  padding: 10px;
+  background-color: #555555;
+  filter: alpha(opacity=70);
+  opacity: 0.7;
+  
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility:    hidden;
+  -ms-backface-visibility:     hidden;
+  backface-visibility:     hidden; 
+  
+  -webkit-transform: rotate(18deg);
+  -moz-transform: rotate(18deg);
+  -o-transform: rotate(18deg);
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2); /*for IE*/
+  transform: rotate(18deg);
+  
+  -webkit-transition: top 0.25s ease, left 0.25s ease, opacity 0.25s ease;
+  -moz-transition: top 0.25s ease, left 0.25s ease, opacity 0.25s ease;
+  -o-transition: top 0.25s ease, left 0.25s ease, opacity 0.25s ease;
+  transition: top 0.25s ease, left 0.25s ease, opacity 0.25s ease;
+}
+.navItem:after {
+    display: block;
+    content:" ";
+    width: 40px;
+    height: 50px;
+    top: 0px;
+    background-color: #FFF;
+    position: absolute;
+    right: -8px;
+    transform:skewX(18deg);
+    -ms-transform:skewX(18deg);
+    -webkit-transform:skewX(18deg);
+}
+.navItem:hover {
+  top: 8px;
+  left: 25px;
+  filter: alpha(opacity=100);
+  opacity: 1;
+}
+
+
+.nav1 {
+  background-color: #ddcc00;
+}
+.nav1:after {
+  background-color: #ddcc00;
+}
+
+
+.nav2 {
+  background-color: #ddaa00;
+}
+.nav2:after {
+  background-color: #ddaa00;
+}
+
+
+.nav3 {
+  background-color: #dd7700;
+}
+.nav3:after {
+  background-color: #dd7700;
+}
+
+
+.nav4 {
+  background-color: #dd4400;
+}
+.nav4:after {
+  background-color: #dd4400;
+}
+
+
+.nav5 {
+  background-color: #dd1100;
+}
+.nav5:after {
+  background-color: #dd1100;
+}
+
+
+.navWords{
+  float: right;
+  width: 140px;
+  text-decoration: none;
+  color: #f3f3f3;
+}
+
+.clearIt {
+  clear: both;
+}
+
+#TronPage{
+  height: 600px;
+  width: 600px;
+  margin-left: 25%;
+  margin-top: 5%;
+}
+
+#PongPage{
+  height: 600px;
+  width: 600px;
+  margin-left: 25%;
+  margin-top: 5%;
+}
+
+#SnakePage{
+  height: 600px;
+  width: 600px;
+  margin-left: 25%;
+  margin-top: 5%;
+}
+
+/*STILE DEL BOTTONE GIOCO*/
+.playButton{
+  padding-top: 42px;
+  text-align: center;
+}
+#playTron{
+  background-color: #e74c3c;
+  box-shadow: 0px 5px 0px 0px #CE3323;
+  border-radius: 5px;
+  padding: 15px 25px;
+  font-size: 18px ;
+  text-decoration: none;
+  margin: 5px;
+  margin-bottom: 10px;
+  color: #fff;
+  position: relative;
+  display: inline-block;
+}
+#playTron:active {
+  transform: translate(0px, 5px);
+  -webkit-transform: translate(0px, 5px);
+  box-shadow: 0px 1px 0px 0px;
+}
+#playTron:hover{
+  background-color: #FF6656;
+}
+
+img{
+  margin-left: 35px;
+}

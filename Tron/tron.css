@@ -1,0 +1,11 @@
+html{
+	background-image: url("img/backgroundTron.jpg");
+}
+canvas{
+	margin-left: 32%;
+}
+h1{
+  	font-family: 'Audiowide', Arial, Helvetica, sans-serif;
+  	font-size: 24px;
+  	text-align: center;
+}

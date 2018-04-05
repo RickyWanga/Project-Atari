@@ -6,7 +6,7 @@ var player1, player2;
 function setup() {
   createCanvas(500, 500);
 
-  frameRate(25);
+  frameRate(60);
 
 	/* INIZIALIZZAZIONE GIOCATORI */
   player1 = new Bike(50 / SCL, height / 2 / SCL, 1, 0, color("#40E0D0"));

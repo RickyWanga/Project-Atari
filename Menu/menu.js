@@ -24,3 +24,6 @@ $(document).ready(function(){
 function openTron(){
 	window.open("../Tron/index.html");
 }
+function openPong(){
+    window.open("../Pong/index.html");
+}

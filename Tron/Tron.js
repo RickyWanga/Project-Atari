@@ -6,7 +6,7 @@ var player1, player2;
 function setup() {
   createCanvas(500, 500);
 
-  frameRate(60);
+  frameRate(25);
 
 	/* INIZIALIZZAZIONE GIOCATORI */
   player1 = new Bike(50 / SCL, height / 2 / SCL, 1, 0, color("#40E0D0"));
@@ -21,7 +21,7 @@ function draw() {
 
 
 // GESTISCE L'INPUT DEI GIOCATORI
-//PLAYER 1 = W, A, S, & D
+//PLAYER 1 = W, A, S, & D          
 //PLAYER 2 = UP, LEFT, DOWN, & RIGHT
  
 function keyPressed() {
@@ -101,10 +101,8 @@ function handlePlayers() {
 	}
 }
 
-
 //FINE GIOCO E COMUNICA IL VINCITORE
 function endGame(winner) {
-
   noStroke();
   textAlign(CENTER);
   textSize(42);

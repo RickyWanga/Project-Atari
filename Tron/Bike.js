@@ -20,13 +20,13 @@ Bike.prototype.draw = function() {
 };
 
 //AGGIUNGE VELOCITA' E AGGIORNA LA SCIA
-Bike.prototype.update = function() {
+Bike.prototype.update = function() {  
 
   this.trail.push(createVector(this.location.x, this.location.y));
   this.location.add(this.velocity);
 };
 
-//CONTROLLA LA DIREZIONE
+//CONTROLLA LA DIREZIONE della moto 
 Bike.prototype.setVelocity = function(velocity) {
 
 	if (Math.abs(velocity.y - this.velocity.y) > 1 ||

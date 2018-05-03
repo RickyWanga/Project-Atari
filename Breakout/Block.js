@@ -1,6 +1,6 @@
-/**
- * OGGETO BLOCK
- */
+
+ // oggetto blocco
+ 
 function Block(x, y, width, height, color) {
 
   this.position = createVector(x, y);
@@ -22,8 +22,8 @@ Block.prototype.draw = function() {
 
 Block.prototype.update = function() {
 
-  this.position.x += this.xVelocity; // MOVIMENTO
-  this.xVelocity *= 0.7; // FRIZIONE
+  this.position.x += this.xVelocity; // movimento
+  this.xVelocity *= 0.7; 
 
   this.position.x = constrain(this.position.x, 0, width - this.width);
 };

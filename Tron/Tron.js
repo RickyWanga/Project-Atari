@@ -2,6 +2,8 @@
 const SCL = 5; // SCALA PIXEL DI OGNI RIQUADRO
 
 var player1, player2;
+var p1=prompt("Inserire il nome del Giocatore 1 : ");
+var p2=prompt("Inserire il nome del Giocatore 2 : ");
 
 function setup() {
   createCanvas(500, 500);
@@ -90,14 +92,14 @@ function handlePlayers() {
 		// SE IL GIOCATORE 1 COLPISCE IL GIOOCATORE 2 O IL LATO DELLO SCHERMO
 		// O SE IL GIOCATORE 2 COLPISCE SE STESSO
 
-		endGame("L'ARANCIONE VINCE! Premere F5 per ricominciare");
+		endGame(p2 + " VINCE! Premere F5 per ricominciare");
 	} else if (player2.collidesWith(player1.trail) ||
 		player2.collidesWithBounds() || player2.collidesWith(player2.trail)) {
 
 		// SE IL GIOCATORE COLPISCE IL GIOCATORE 1 O IL LATO DELLO SCHERMO
 		// O SE IL GIOCATORE 1 COLPISCE SE STESSO
 
-		endGame("IL CIANO VINCE! Premere F5 per ricominciare");
+		endGame(p1 + " VINCE! Premere F5 per ricominciare");
 	}
 }
 

@@ -20,7 +20,7 @@ function setup() {
   player1Velocity = player2Velocity = 0;
   player1Score = player2Score = 0;
 
-  ball = createVector(width / 2, height / 2); // INIZILIZZA LA PALLA NEL CENTRO
+  ball = createVector(width / 2, height / 2); // INIZIALIZZA LA PALLA NEL CENTRO
   ballVelocity = createVector(random(-1, 1), random(-1, 1)); // DA ALLA PALLA UNA TRAIETTORIA RANDOM
   ballVelocity.setMag(INITIAL_BALL_SPEED); // SETTO LA VELOCITA' DELLA PALLA A 3
 

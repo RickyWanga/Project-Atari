@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 <head>
   <meta charset="utf-8">
@@ -8,7 +9,7 @@
   <script src="menu.js"></script>
 </head>
 <div class='backing'></div>
-
+<!--Codice della barra di navigazione laterale 42-->
 <header class='navigation'>
   <nav>
     <a href='#' class='navItem nav1'>
@@ -27,21 +28,21 @@
 
     <a href='#' class='navItem nav3'>
       <div class='navWords'>
-        Snake
+        Breakout
       </div>
       <div class='clearIt'></div>
     </a>
 
     <a href='#' class='navItem nav4'>
       <div class='navWords'>
-        No. 4
+        Dodge
       </div>
       <div class='clearIt'></div>
     </a>
 
     <a href='#' class='navItem nav5'>
       <div class='navWords'>
-        No. 5
+        Crediti
       </div>
       <div class='clearIt'></div>
     </a>
@@ -53,10 +54,13 @@
   <h1>Tron : Legacy</h1>
   <p>Classic Arcade Tron Game.</p>
   <p>
-    Tron è un videogioco arcade pubblicato da Bally Midway nel 1982, ispirato all'omonimo film.
+    Tron è un videogioco pubblicato da Bally Midway nel 1982, ispirato all'omonimo film.
   </p>
-
   <img src="img/tron-thumb.jpg" alt="Thumbnail del gioco arcade Tron" />
+  <h3>CONTROLLI</h3>
+  <p>Giocatore 1 : WASD </p>
+  <p>Giocatore 2 : Tasti Freccia</p>
+  
 
   <div class="playButton">
     <button class="playGame" id="playTron" onclick="openTron()">Gioca</button>
@@ -67,17 +71,56 @@
 <div id="PongPage">
   <h1>Pong</h1>
   <p>Classic Arcade Pong Game.</p>
-   <div class="playButton">
+  <p>Pong (stilizzato PONG) è uno dei primi videogiochi commercializzati.
+    <br />
+   Si trattava di un simulatore di ping-pong (da cui il nome "PONG"), dalla grafica estremamente semplificata in bianco e nero.</p>
+   <img src="img/Pong-cabinet.jpg" alt="Thumbnail del gioco arcade Pong" />
+  <h3>CONTROLLI</h3>
+  <p>Giocatore 1 : WS</p>
+  <p>Giocatore 2 : Tasti Freccia Su e Giu</p> 
+  <div class="playButton">
     <button class="playGame" id="playPong" onclick="openPong()">Gioca</button>
   </div>
 </div>
 
-<div id="SnakePage">
-  <h1>Snake</h1>
-  <p>Classic Arcade Snake Game.</p>
+<div id="BreakoutPage">
+  <h1>Breakout</h1>
+  <p>Classic Arcade Breakout Game.</p>
   <p>
-    Tron è un videogioco arcade pubblicato da Bally Midway nel 1982, ispirato all'omonimo film.
+    Breakout è un videogioco arcade, realizzato da Atari e pubblicato il 13 maggio 1976;
+    <br />
+    in seguito è stato convertito per la maggior parte delle piattaforme domestiche, come Super Breakout.
   </p>
-  <br>
+  <img src="img/Breakout-cabinet.jpg" alt="Thumbnail del gioco arcade Breakout" />
+  <h3>CONTROLLI</h3>
+  <p>Tasti Freccia Sinistra e Destra</p>
+  <div class="playButton">
+    <button class="playGame" id="playBreakout" onclick="openBreakout()">Gioca</button>
+  </div>
 
+</div>
+
+<div id="DodgePage">
+  <h1>Dodge</h1>
+  <p>Classic Arcade-Style Dodge Game.</p>
+  <p>
+    Dodge trae ispirazione da un gioco indie attualmente disponibile per l'acquisto sul portale online di 
+    vendita di videogiochi STEAM.
+    <br />
+    Questa è una ricreazione del medesimo gioco in javascript.
+  </p>
+  <h3>CONTROLLI</h3>
+  <p>Tasti Freccia</p>
+  <div class="playButton">
+    <button class="playGame" id="playDodge" onclick="openDodge()">Gioca</button>
+  </div>
+
+</div>
+
+<div id="Crediti">
+  <h1>Crediti</h1>
+  <h4>Creatori : </h4>
+  <p>Gurjyot Wanga : Tron e Dodge</p>
+  <p>Davide Rabotti : Breakout</p>
+  <p>Luca Favali : Pong</p>
 </div>

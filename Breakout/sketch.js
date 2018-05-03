@@ -1,119 +1,120 @@
 
 var paddle;
 var ball;
-
-var blocks = []; 				// I BLOCCHI SULLO SCHERMO
-var staticBlocks = []; 	// I BLOCCHI AI BORDI
-
-var score;
+var scoretot = 0;
+var blocks = [];
+var staticBlocks = [];
+var liv1=5;
+var livello=1;
+var score=0;
 
 function setup() {
-  createCanvas(600, 400);
+  createCanvas(800, 600);
 
-	ball = new Ball(width / 2, height / 2, random(-3, 3), random(2, 4), 10);
+	ball = new Ball(width / 2, height / 2, random(-4, 4), random(2, 4), 10);
 
-  paddle = new Block(width / 2 - 50, height - 40, 100, 10, "#FFFFF");
+  paddle = new Block(width / 2 -50, height - 40, 100, 10, "#FFFFFF");
 
-  populateBlocks(5, 5);
-
-  score = 0;
-
-  textSize(20);
+  creablocchi(liv1,5);
   textAlign(CENTER);
-  noStroke();
 }
 
 function draw() {
 
-  background(51);
+  background(0);
 
-	/* CONTROOLLA PER LA VITTORIA */
+	/* controlla vittoria*/
   if (score === blocks.length)
     endGame(true);
 
 	drawGame();
 	handleKeys();
 
-  /* GESTICE I MOVIMENTI */
-	paddle.update();
+  /* movimenti */
+	paddle.update(ball); //?
 	ball.update(blocks, staticBlocks, paddle);
 
 	handleKeys();
 }
 
-/**
-	* GESTISCE L'INPUT DELL'UTENTE
-	*/
+
+	 //comandi
+
 function handleKeys() {
-
   if (keyIsDown(LEFT_ARROW)) {
-
-    paddle.move(-2);
+paddle.move(-2);
   } else if (keyIsDown(RIGHT_ARROW)) {
-
-    paddle.move(2);
+paddle.move(2);
   }
 }
-
-/**
-	* DISEGNA IL PUNTEGGIO, LA PALLA , I BLOCCHI E IL PADDLE
-	*/
+// punteggio palla blocchi paddle
 function drawGame() {
-
+  textSize(20);
   fill(255);
-  text(score, 50, height - 50); // DISEGNA IL PUNTEGGIO
+  text("score: " + scoretot, 50, height - 50);
+  text("livello: " + livello,50, height - 70);
 
-	paddle.draw(); // DISEGNA IL GIOCATORE
-	ball.draw(); // DISEGNA LA PALLA
+	paddle.draw();
+	ball.draw();
 
   for (var i = 0; i < blocks.length; i++) {
-    /* DISEGNA I BLOCCHI */
 
     if (blocks[i].intact)
 			blocks[i].draw();
   }
 
 }
+var vinto=true;
 
-/**
-	* FINE DEL GIOCO
-	*/
-function endGame(won) {
+	 //finale
+
+function endGame(vinto) {
 
   fill(255);
-  textSize(50);
-
-  if (won) {
-    text("You win!", width / 2, height / 2);
-  } else {
-    text("You lose!", width / 2, height / 2);
-  }
-
   textSize(30);
-  text("Press f5 to restart!", width / 2, height / 2 - 40);
+  var stringaVittoria="Hai finito il gioco";
+  if (vinto) {
+  //  text(stringaVittoria, width / 2, height / 2);
+    livello++;
+    if(livello===6)
+    {
+      delete Ball;
+      delete Paddle;
+      text(stringaVittoria, width / 2, height / 2);
+      noLoop();
+    }else{
 
-  noLoop();
+    score=0;
+    delete Ball;
+    delete Paddle;
+    setup();
+    drawGame();
+    creablocchi(liv1++,5);
+    }
+  } else {
+    text("Hai perso ", width / 2, height / 2);
+    textSize(20);
+    text("Aggiorna la pagina per rincominciare", width / 2, height / 2 - 40);
+
+  }
 }
 
-/**
-	* RIEMPE LO SCHERMO CON I BLOCCHI
-	*/
-function populateBlocks(rows, cols) {
+function creablocchi(rows, cols) {
 
   blocks = [];
 
-	var padding = 5; // SPAZIO TRAI BLOCCHI
+	var padding = 10; // space between blocks
   var w = (width / cols) - (padding * 2);
-  var h = 10;
+  var h = 16;
 
-  var offset = (width - (w + padding) * cols) / 2;
+  var Masx = (width - (w + padding) * cols) / 2;
 
   for (var row = 0; row < rows; row++) {
     for (var col = 0; col < cols; col++) {
 
-      var x = (col * w) + (col * padding) + offset;
+      var x = (col * w) + (col * padding) + Masx;
       var y = (row * h) + (row * padding);
-      blocks.push(new Block(x, y, w, h, color(random(255), 0, random(255))));
+      blocks.push(new Block(x, y, w, h, color(random(255), random(255),255)));
     }
   }
 }

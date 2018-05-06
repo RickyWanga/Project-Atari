@@ -1,3 +1,6 @@
+body{
+		background-image: url("../Menu/img/arcade-background.jpg");
+	}
 canvas{
 	margin-left: 27%;
 }

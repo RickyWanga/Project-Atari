@@ -10,6 +10,9 @@ html {
   background-image: url("img/arcade-background.jpg");
 }
 
+.titoli{
+		border-bottom:5px solid white;
+}
 body {
   margin: 0px;
   width: 100%;
@@ -31,6 +34,12 @@ header {
   padding: 25px 0px;
 }
 
+.nome{
+		border-bottom:3px solid orange;
+}
+#imgbreak{
+		width:90%;
+}
 .navItem {
   display: block;
   position: relative;
